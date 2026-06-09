@@ -1,84 +1,108 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Atelier Belle — Moda Feminina Premium</title>
-<meta name="description" content="Loja de moda feminina com peças exclusivas: vestidos, conjuntos esportivos e looks elegantes para o dia a dia.">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meus Links</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: url('fundo.jpg') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(6px);
+      padding: 30px 20px;
+      border-radius: 20px;
+      text-align: center;
+      width: 90%;
+      max-width: 350px;
+      color: #fff;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 15px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    /* Botão Verde */
+    .btn-site {
+      background: #25D366;
+      color: #fff;
+    }
+
+    /* Botão Telegram Azul */
+    .btn-telegram {
+      background: #2AABEE;
+      color: #fff;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+
+    .icon {
+      width: 18px;
+      height: 18px;
+    }
+  </style>
 </head>
+
 <body>
-<header class="header">
-  <div class="container nav">
-    <a href="#" class="logo">Atelier <span>Belle</span></a>
-    <nav>
-      <a href="#produtos">Produtos</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#contato">Contato</a>
-    </nav>
-    <button class="cart-btn" id="cartBtn">Sacola <span id="cartCount">0</span></button>
+
+  <div class="container">
+    <img src="perfil.jpg" alt="Foto de Perfil" class="profile-pic" />
+
+    <h1>Bem-vindo(a) 💜</h1>
+
+    <a href="https://SEU-LINK-DA-PAGINA.com" class="btn btn-site">
+      🌐 Acessar Minha Página +18
+    </a>
+
+    <a href="https://t.me/larissasouzaaa" class="btn btn-telegram">
+      <svg class="icon" viewBox="0 0 24 24" fill="white">
+        <path d="M9.993 15.674l-.396 5.585c.568 0 .814-.244 1.108-.538l2.658-2.542 5.512 4.031c1.01.557 1.73.264 1.986-.937l3.6-16.87.001-.001c.31-1.45-.523-2.017-1.51-1.657L1.21 9.39c-1.418.557-1.396 1.348-.241 1.706l5.65 1.763L19.69 5.8c.615-.377 1.176-.168.715.209"/>
+      </svg>
+      Entrar no Telegram
+    </a>
   </div>
-</header>
 
-<section class="hero">
-  <div class="container hero-inner">
-    <p class="eyebrow">Coleção 2026</p>
-    <h1>Elegância em cada peça</h1>
-    <p class="lead">Moda feminina premium com entrega para todo o Brasil. Tecidos selecionados, caimento impecável.</p>
-    <a href="#produtos" class="btn-primary">Ver coleção</a>
-  </div>
-</section>
-
-<section class="features container">
-  <div><strong>Frete grátis</strong><span>Acima de R$ 299</span></div>
-  <div><strong>Parcele em 6x</strong><span>Sem juros</span></div>
-  <div><strong>Troca fácil</strong><span>Em até 30 dias</span></div>
-  <div><strong>Pagamento seguro</strong><span>Pix, cartão e boleto</span></div>
-</section>
-
-<section class="products container" id="produtos">
-  <h2>Mais desejados</h2>
-  <div class="filters" id="filters"></div>
-  <div class="grid" id="productGrid"></div>
-</section>
-
-<section class="about container" id="sobre">
-  <h2>Sobre a Atelier Belle</h2>
-  <p>Somos uma marca brasileira dedicada a criar peças atemporais que valorizam a mulher moderna. Cada item da nossa coleção é pensado para unir conforto, qualidade e estilo.</p>
-</section>
-
-<footer id="contato">
-  <div class="container footer-inner">
-    <div>
-      <h3>Atelier Belle</h3>
-      <p>Moda feminina premium</p>
-    </div>
-    <div>
-      <h4>Contato</h4>
-      <p>contato@atelierbelle.com.br</p>
-      <p>(11) 90000-0000</p>
-    </div>
-    <div>
-      <h4>Atendimento</h4>
-      <p>Seg a Sex — 9h às 18h</p>
-    </div>
-  </div>
-  <p class="copy">© 2026 Atelier Belle. Todos os direitos reservados.</p>
-</footer>
-
-<div class="cart-drawer" id="cartDrawer">
-  <div class="cart-head">
-    <h3>Sua sacola</h3>
-    <button id="closeCart">×</button>
-  </div>
-  <div id="cartItems"></div>
-  <div class="cart-foot">
-    <div class="total">Total: <span id="cartTotal">R$ 0,00</span></div>
-    <button class="btn-primary" onclick="alert('Checkout em breve!')">Finalizar compra</button>
-  </div>
-</div>
-<div class="overlay" id="overlay"></div>
-
-<script src="js/script.js"></script>
 </body>
 </html>
